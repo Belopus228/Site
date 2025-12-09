@@ -1,5 +1,6 @@
 {
   "scripts": {
-    "build": "npm run build:your-tool"
+    "build": "vite build"        // Vite -> publishes "dist"
+    // "build": "react-scripts build" // CRA -> publishes "build"
   }
 }
