@@ -1,0 +1,4 @@
+# netlify.toml
+[build]
+  publish = "dist"     # change to your build output folder (e.g. public, build, dist)
+  command = "npm run build"  # change to your build command
