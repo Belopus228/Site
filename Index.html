@@ -3,9 +3,36 @@
 <head>
     <meta charset="UTF-8" />
     <title>Бесконечное воспроизведение звука</title>
+    <style>
+        /* Увеличиваем размер кнопки */
+        #playButton {
+            font-size: 50px; /* Размер текста */
+            padding: 100px 100px; /* Внутренние отступы (высота и ширина) */
+            cursor: pointer; /* курсор как указатель при наведении */
+            background-color: #4CAF50; /* Цвет фона */
+            color: white; /* Цвет текста */
+            border: none; /* Убираем рамку */
+            border-radius: 8px; /* Скругление углов */
+            transition: background-color 0.3s; /* Плавное изменение цвета при наведении */
+        }
+        /* Цвет фона при наведении */
+        #playButton:hover {
+            background-color: #45a049;
+        }
+    </style>
 </head>
 <body>
     <h1>Автоматическое бесконечное воспроизведение звука</h1>
-    <audio id="myAudio" src="sound.mp3" autoplay loop></audio>
+    <button id="playButton" onclick="playSound()">Воспроизвести звук</button>
+    <audio id="myAudio" src="sound.mp3" loop></audio>
+
+    <script>
+        function playSound() {
+            const audio = document.getElementById('myAudio');
+            audio.play().catch(function(error){
+                alert("Не удалось воспроизвести звук: " + error);
+            });
+        }
+    </script>
 </body>
 </html>
