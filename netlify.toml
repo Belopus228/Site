@@ -1,4 +1,4 @@
-# netlify.toml
 [build]
-  publish = "dist"     # change to your build output folder (e.g. public, build, dist)
+  base = ""           # optional: set to a subdirectory if your site is in a subfolder
+  publish = "dist"    # change to your build output folder (e.g. "build", "public")
   command = "npm run build"  # change to your build command
