@@ -1,6 +1,0 @@
-{
-  "scripts": {
-    "build": "vite build"        // Vite -> publishes "dist"
-    // "build": "react-scripts build" // CRA -> publishes "build"
-  }
-}
